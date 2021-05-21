@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Vue</title>
+    <script src = 'https://unpkg.com/vue@3.0.2'></script>  
+<body>
+    <h1> Hello Vue :)</h1>
+
+    <div id = "app">
+        <!-- <p>The Final Empire </p> instead of this hardcode--> 
+        <p>{{ title }} - {{ author }} - {{ age }}</p> <!--Dynamically add-->
+
+        <button v-on:click = "age++"> Increese age </button> 
+        <button v-on:click = "age--"> Decreese age </button> 
+        <div @click = "changeTitle('Ahamed')">Change book title</div>  <!--Can use prameter passing also -->
+    </div>
+
+
+    <script src = "app.js"></script>
+</body>
+</html>
