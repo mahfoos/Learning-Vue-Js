@@ -6,7 +6,9 @@ const app = Vue.createApp({    // Initialize the app
             showBooks:true,
             title: 'The final empire',
             author: 'Mahfoos Ahamed',
-            age:23
+            age:23,
+            x : 0,
+            y:0
         }
     },
 
@@ -14,8 +16,15 @@ const app = Vue.createApp({    // Initialize the app
        toggleShowBooks () {
            this.showBooks = !this.showBooks
        },
-       handleEvent() {
-           console.log('Event')
+       handleEvent(e, data) {
+           console.log(e, e.type)
+           if (data) {
+               console.log(data)
+           }
+       },
+       handleMousemove(e) {
+           this.x = e.offsetX
+           this.x = e.offsetY
        }
        
     }
