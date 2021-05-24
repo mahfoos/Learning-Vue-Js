@@ -24,7 +24,7 @@ const app = Vue.createApp({    // Initialize the app
        },
        handleMousemove(e) {
            this.x = e.offsetX
-           this.x = e.offsetY
+           this.y = e.offsetY
        }
        
     }
