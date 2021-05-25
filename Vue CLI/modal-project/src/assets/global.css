@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+}
+
+p {
+    font-style: italic;
+} 
+
+/* Can overite the global css into other components */
