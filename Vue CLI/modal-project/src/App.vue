@@ -1,7 +1,14 @@
 <!--Root Component-->
 <template>
     <h1>{{ title }}</h1>
-    <Model />
+    <p>Welcome...</p>
+    <div v-if = "showModel">
+          <Model :header="header" :text="text" theme = "sale"/>
+    </div>
+
+    <button @click="toggleModel"> Open Model </button>
+    <!-- <Model  header = "The Man still trying" text = "Still doing"/> -->
+    
     <!-- <input type="text" ref = "name">
     <button @click="handleClick"> Click Me </button>   lesson - 1 -->
 </template>
@@ -14,7 +21,10 @@ export default {
   components: { Model},
   data() {
     return {
-      title: "My First vue App :)"
+      title: "My First vue App :)",
+      header:" The Man Try Differnet",
+      text:"Grab Grab",
+      showModel: false
     }
   },
 
@@ -24,6 +34,9 @@ export default {
     //   this.$ref.name.classList.add('active') // adding claas to inout field
     //   this.$ref.name.focus()
     //  lesson - 1 }
+    toggleModel() {
+      this.showModel = !this.showModel;
+    }
 
   }
 }
