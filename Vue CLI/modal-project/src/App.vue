@@ -3,10 +3,18 @@
     <h1>{{ title }}</h1>
     <p>Welcome...</p>
     <div v-if = "showModel">
-          <Model :header="header" :text="text" theme = "sale"/>
+          <!-- <Model :header="header" :text="text" theme = "sale" @close="toggleModel"/> -->
+          <Model theme = "sale" @close="toggleModel">
+            <template v-slot:links>
+              <a href="#"> Sign Up Now</a>
+              <a href="#"> More info</a>
+            </template>
+            <h1>Mahfoos Ahamed</h1>
+            <p>Software Engineer</p>
+          </Model>
     </div>
 
-    <button @click="toggleModel"> Open Model </button>
+    <button @click.alt="toggleModel"> Open Model (ALT) </button> <!-- modyfying click events-->
     <!-- <Model  header = "The Man still trying" text = "Still doing"/> -->
     
     <!-- <input type="text" ref = "name">

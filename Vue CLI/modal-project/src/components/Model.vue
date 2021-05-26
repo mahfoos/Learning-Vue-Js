@@ -1,8 +1,13 @@
 <template>
-    <div class="backdrop" @click="closeModel">
+    <div class="backdrop" @click.self="closeModel">
+        
         <div class="model" :class=" { sale:theme === 'sale'}">
-            <h1>{{ header }}</h1>
-            <p>{{ text }}</p>
+            <slot> </slot>
+            <!-- <h1>{{ header }}</h1>
+            <p>{{ text }}</p> -->
+            <div class="actions">
+                <slot name="links"></slot>
+            </div>
         </div>
     </div>
 </template>
@@ -10,10 +15,11 @@
 <script>
     
     export default {
-        props: ['header', 'text','theme'],   // Registering the prop Must be string 
+        // props: ['header', 'text','theme'],   // Registering the prop Must be string 
+         props: ['theme'],
         methods : {
             closeModel(){
-                this.$emit('close')
+                this.$emit('close')  // creating custom events
             }
         }
     }
