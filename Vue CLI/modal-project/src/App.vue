@@ -4,7 +4,7 @@
     <p>Welcome...</p>
     <div v-if = "showModel">
           <!-- <Model :header="header" :text="text" theme = "sale" @close="toggleModel"/> -->
-          <Model theme = "sale" @close="toggleModel">
+          <Model  @close="toggleModel">
             <template v-slot:links>
               <a href="#"> Sign Up Now</a>
               <a href="#"> More info</a>

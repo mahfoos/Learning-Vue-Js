@@ -31,7 +31,7 @@
         width:400px;
         padding:20px;
         margin:100px auto;
-        background: grey;
+        background: white;
         border-radius:10px;
     }
 
@@ -56,6 +56,21 @@
 
     .model.sale h1 {
         color: white;
+    }
+
+    .model .actions {
+        text-align :center;
+        margin:30px 0px 10px 0;
+
+    }
+
+    .model .actions a {
+        color: #333;
+        padding: 8px;
+        border:1px solid #eee;
+        border-radius: 4px;
+        text-decoration: none;
+        margin: 10px;
     }
 
     p{
